@@ -6,14 +6,13 @@ import metamask from "../../assets/images/metamask.png";
 import Header from "../Header";
 
 import "./style.css";
-import { AutomateSDK } from "@gelatonetwork/automate-sdk";
 import Action from "../Action";
 import Loading from "../Loading";
 import Button from "../Button";
 import { CallWithERC2771Request, GelatoRelay } from "@gelatonetwork/relay-sdk";
 
 
-const GELATO_RELAY_API_KEY = ""
+const GELATO_RELAY_API_KEY = "" // YOUR SPONSOR KEY
 
 const App = () => {
   // these could potentially be unified into one provider
@@ -46,6 +45,7 @@ const App = () => {
           },
         ],
       });
+      window.location.reload() 
     } catch (error) {}
   };
 
